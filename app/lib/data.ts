@@ -18,7 +18,7 @@ export async function fetchRevenue() {
   try {
     // Artificially delay a response for demo purposes.
     // Don't do this in production :)
-
+    //FIXME: Remove 2 lines below
     console.log('Fetching revenue data...');
     await new Promise((resolve) => setTimeout(resolve, 3000));
 
@@ -35,6 +35,9 @@ export async function fetchRevenue() {
 
 export async function fetchLatestInvoices() {
   noStore();
+  //FIXME: remove 2 lines below
+  console.log('Fetching revenue data...');
+  await new Promise((resolve) => setTimeout(resolve, 3000));
   try {
     const data = await sql<LatestInvoiceRaw>`
       SELECT invoices.amount, customers.name, customers.image_url, customers.email, invoices.id
@@ -56,6 +59,9 @@ export async function fetchLatestInvoices() {
 
 export async function fetchCardData() {
   noStore();
+  //FIXME: remove 2 lines below
+  console.log('Fetching revenue data...');
+  await new Promise((resolve) => setTimeout(resolve, 3000));
   try {
     // You can probably combine these into a single SQL query
     // However, we are intentionally splitting them to demonstrate
